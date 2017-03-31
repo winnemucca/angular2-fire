@@ -1,4 +1,15 @@
-.flexDemoContainer {
-  border: solid 1px red;
-  box-sizing: content-box !important;
+body {
+  background: #00C0D9;
+}
+
+.home-title {
+  border: 2px solid;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 50%;
+  color: #fff;
+  padding: 1rem;
+  font-size: 2rem;
+  box-shadow: 10px 10px 5px #888888;
 }
