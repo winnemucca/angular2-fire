@@ -6,6 +6,11 @@ import { RouterModule } from '@angular/router';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+// third party
+import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import 'hammerjs';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home-component/home-component.component';
@@ -35,7 +40,9 @@ import { appRoutes } from './routes';
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule.forRoot(),
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
