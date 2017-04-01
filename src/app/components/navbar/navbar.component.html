@@ -7,7 +7,7 @@
     <!-- This fills the remaining space of the current row -->
     <span class="fill-remaining-space"></span>
     <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-        <button md-button >Listings</button>
+        <button md-button [routerLink]="['listings']">Listings</button>
         <button md-button >Dashboard</button>
     </div>
     <button md-button [md-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
@@ -16,7 +16,7 @@
 
 </md-toolbar>
 <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item >Products</button>
+    <button md-menu-item [routerLink]="['listings']">Listings</button>
     <button md-menu-item >Dashboard</button>
     <!--<button md-menu-item>Help</button>-->
 </md-menu>
