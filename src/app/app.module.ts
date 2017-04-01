@@ -10,6 +10,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
+import { AngularFireModule } from 'angularfire2';
+
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyCRTyhESU_HW4bLoHoPTsGDVI3KvVG6pY4',
+  authDomain: 'daycare-listings.firebaseapp.com',
+  databaseURL: 'https://daycare-listings.firebaseio.com',
+  storageBucket: 'daycare-listings.appspot.com',
+  messagingSenderId: '410407501477'
+};
 
 
 import { AppComponent } from './app.component';
@@ -39,6 +49,7 @@ import { appRoutes } from './routes';
     BrowserModule,
     FormsModule,
     HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MaterialModule.forRoot(),
