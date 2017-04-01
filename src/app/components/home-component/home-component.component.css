@@ -28,7 +28,6 @@ md-card-header {
   position: relative;
   border-radius: 50%;
   padding: 1rem;
-  /*font-size: 2em;*/
   box-shadow: 10px 10px 5px #888888;
  
 }
@@ -50,10 +49,25 @@ button {
 }
 
 
-
+/*need a big refactor on this if planning to use this for real project*/
 .mat-button:first-child {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 3px;
 }
+
+
+.button-red {
+  margin-top: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
