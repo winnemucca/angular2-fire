@@ -3,14 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+// services
+
+import { FirebaseService } from './services/firebase.service';
 
 // third party
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 
 export const firebaseConfig = {
@@ -19,6 +22,11 @@ export const firebaseConfig = {
   databaseURL: 'https://daycare-listings.firebaseio.com',
   storageBucket: 'daycare-listings.appspot.com',
   messagingSenderId: '410407501477'
+};
+
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Popup
 };
 
 import {
@@ -51,13 +59,13 @@ import { appRoutes } from './routes';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MaterialModule.forRoot(),
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

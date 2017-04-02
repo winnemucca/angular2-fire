@@ -10,7 +10,9 @@
         <button md-button [routerLink]="['listings']">Listings</button>
         <button md-button >Dashboard</button>
         <button md-button class="md-18|md-24|md-36|md-48"> Add Listing </button>
-        <button md-button>Sign In</button>
+        <button *ngIf="!(af.auth | async)" md-button (click)="login()">Login</button>
+        <button *ngIf="(af.auth | async)" md-button (click)="logout()">Logout</button>
+        
     </div>
     <button md-button [md-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
         <md-icon>menu</md-icon>
