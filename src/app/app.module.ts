@@ -21,12 +21,14 @@ export const firebaseConfig = {
   messagingSenderId: '410407501477'
 };
 
+import {
+  ListingsComponent,
+  ListingComponent
+} from './components/daycareListings/index';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home-component/home-component.component';
-import { ListingsComponent } from './components/listings/listings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ListingComponent } from './components/listing/listing.component';
 import { AddListingComponent } from './components/add-listing/add-listing.component';
 import { EditListingComponent } from './components/edit-listing/edit-listing.component';
 import { PageNotFoundComponent } from './components/page-not-found-component/page-not-found-component.component';
