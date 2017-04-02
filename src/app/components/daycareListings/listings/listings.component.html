@@ -1,6 +1,4 @@
-<div class="flexDemoContainer">
-  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
-    <div fxFlex> I'm above on mobile, and left on larger devices. </div>
-    <div fxFlex> I'm below on mobile, and right on larger devices. </div>
-  </div>
-</div>
+<md-card *ngFor="let listing of listings"> 
+  <md-card-title>{{listing.title}}</md-card-title>
+  <button md-raised-button color="primary">accent</button>
+</md-card>

@@ -13,7 +13,7 @@ export class ListingsComponent implements OnInit {
 
     this.firebaseservice.getListings().subscribe(listings => {
       console.log('lists', listings);
-      this.listings = listings;
+      this.listings = listings[0];
     });
   }
 
