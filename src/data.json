@@ -1,7 +1,7 @@
-{
-  "listings": [
+
+  [
     {
-      "$key": "-Kdl_wRRkn7nJxgz4B54",
+      "key": "-Kdl_wRRkn7nJxgz4B54",
       "bedrooms": 15,
       "city": "San Francisco",
       "image": "mansion1.jpg",
@@ -12,7 +12,7 @@
       "type": "Estate"
     },
     {
-      "$key": "-KdleehAQm0HgVFYdkUo",
+      "key": "-KdleehAQm0HgVFYdkUo",
       "bedrooms": 12,
       "city": "Miami",
       "image": "mansion3.jpg",
@@ -23,7 +23,7 @@
       "type": "Estate"
     },
     {
-      "$key": "-Kdlg3AqKNTnbhjAVT8h",
+      "key": "-Kdlg3AqKNTnbhjAVT8h",
       "bedrooms": 10,
       "city": "Newark",
       "image": "mansion2.jpg",
@@ -34,6 +34,5 @@
       "type": "Estate"
     }
   ]
-}
 
 

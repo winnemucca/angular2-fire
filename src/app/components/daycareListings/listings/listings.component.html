@@ -1,4 +1,4 @@
 <md-card *ngFor="let listing of listings"> 
-  <md-card-title>{{listing.title}}</md-card-title>
+  <md-card-title><a [routerLink]="['/listing/'+listing.key]">{{listing.title}} </a></md-card-title>
   <button md-raised-button color="primary">accent</button>
 </md-card>

@@ -14,7 +14,7 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCRTyhESU_HW4bLoHoPTsGDVI3KvVG6pY4',
@@ -63,7 +63,8 @@ import { appRoutes } from './routes';
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
+    FlashMessagesModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]
