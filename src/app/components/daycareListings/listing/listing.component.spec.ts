@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListingComponent } from './listing.component';
+import { FirebaseService } from '../../../services/firebase.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 describe('ListingComponent', () => {
   let component: ListingComponent;

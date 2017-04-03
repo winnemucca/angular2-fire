@@ -1,0 +1,14 @@
+form {
+    background: #fff;
+    margin: 10px auto;
+
+}
+
+.listing-form {
+  width: 800px;
+  text-align: center;
+}
+
+.listing-full-width {
+  width: 100%;
+}

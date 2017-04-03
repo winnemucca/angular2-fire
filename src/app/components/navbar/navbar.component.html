@@ -7,9 +7,8 @@
     <!-- This fills the remaining space of the current row -->
     <span class="fill-remaining-space"></span>
     <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-        <button *ngIf="!(af.auth | async)" md-button [routerLink]="['listings']">Listings</button>
-        <button md-button >Dashboard</button>
-        <button *ngIf="!(af.auth | async)" md-button class="md-18|md-24|md-36|md-48"> Add Listing </button>
+        <button *ngIf="(af.auth | async)" md-button [routerLink]="['listings']">Listings</button>
+        <button *ngIf="(af.auth | async)" md-button [routerLink]="['add-listing']" class="md-18|md-24|md-36|md-48"> Add Listing </button>
         <button *ngIf="!(af.auth | async)" md-button (click)="login()">Login</button>
         <button *ngIf="(af.auth | async)" md-button (click)="logout()">Logout</button>
         

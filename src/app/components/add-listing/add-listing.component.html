@@ -1,3 +1,48 @@
-<p>
-  add-listing works!
-</p>
+<h2>Add Listing</h2>
+<form class="listing-form">
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="text" placeholder="title" name="title">
+    </md-input-container>
+  </div>
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="text" placeholder="city" name="city">
+    </md-input-container>
+  </div>
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="text" placeholder="owner" name="owner" >
+    </md-input-container>
+  </div>
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="number" placeholder="number" name="bedrooms">
+    </md-input-container>
+  </div>
+
+  <div class="listing-full-width"> 
+    <md-select placeholder="Choice Residence">
+      <!--redo with ngFor-->
+      <md-option  name="type">
+        Condo
+        <!--<option name="Estate">Estate</option> 
+        <option name="Condo"> Condo </option>
+        <option name="Apartment"> Apartment </option>-->
+      </md-option>
+      <md-option>Estate </md-option>
+      <md-option>Apartment </md-option>
+    </md-select>
+  </div>
+  <div class="listing-full-width">
+    <!--cannot use ng-2 file loader with angular 4-->
+    <!--material does not support input type file yet-->
+      <input  type="file" placeholder="image" name="image" style="padding: 2em">
+  </div>
+
+  <div>
+    <button md-raised-button (click)="onClick" color="warn">
+        Submit
+    </button>
+  </div>
+</form>
