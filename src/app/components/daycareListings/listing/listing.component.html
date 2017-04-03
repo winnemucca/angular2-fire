@@ -12,8 +12,8 @@
             City: {{listing.city}}
         </md-card-content>
         <md-card-actions align="start|end">
+            <button md-button (click)="onAction2" [routerLink]="['/edit-listing/'+listing.$key]">Edit</button>
             <button color="warning" md-button (click)="onAction1">Delete</button>
-            <button md-button (click)="onAction2">Edit</button>
             
         </md-card-actions>
         <md-card-footer>
