@@ -1,3 +1,51 @@
-<p>
-  edit-listing works!
-</p>
+<h2>Edit Listing</h2>
+<form class="listing-form" (submit)="onEditSubmit()">
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="text" [(ngModel)]="title" placeholder="title" name="title">
+    </md-input-container>
+  </div>
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="text" [(ngModel)]="city" placeholder="city" name="city">
+    </md-input-container>
+  </div>
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="text" [(ngModel)]="owner" placeholder="owner" name="owner" >
+    </md-input-container>
+  </div>
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="number" [(ngModel)]="price" placeholder="price" name="price">
+    </md-input-container>
+  </div>
+  <div class="listing-full-width">
+    <md-input-container>
+      <input mdInput type="number" [(ngModel)]="bedrooms" placeholder="bedrooms" name="bedrooms">
+    </md-input-container>
+  </div>
+
+  <div class="listing-full-width"> 
+    <md-select placeholder="Choice Residence" [(ngModel)]="type" name="type" >
+      <!--redo with ngFor-->
+      <md-option value="Condo">
+        Condo
+        
+      </md-option>
+      <md-option value="Estate">Estate </md-option>
+      <md-option value="Apartment">Apartment </md-option>
+    </md-select>
+  </div>
+  <!--<div class="listing-full-width">-->
+    <!--cannot use ng-2 file loader with angular 4-->
+    <!--material does not support input type file yet-->
+      <!--<input  id="image" type="file" placeholder="image" [(ngModel)]="image" name="image" style="padding: 2em">
+  </div>-->
+
+  <div>
+    <button type="submit" md-raised-button  color="warn">
+        Submit
+    </button>
+  </div>
+</form>

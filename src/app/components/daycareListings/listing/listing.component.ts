@@ -24,8 +24,8 @@ export class ListingComponent implements OnInit {
     this.firebaseService.getListingDetails(this.id).subscribe(listing => {
       this.listing = listing;
 
-      let storageRef = firebase.storage().ref();
-      let spaceRef = storageRef.child(this.listing.path);
+      const storageRef = firebase.storage().ref();
+      const spaceRef = storageRef.child(this.listing.path);
       storageRef.child(this.listing.path).getDownloadURL().then((url) => {
         // set image url
         this.imageUrl = url;
@@ -33,6 +33,11 @@ export class ListingComponent implements OnInit {
         console.log('error', error);
       });
     });
+  }
+
+  onDeleteClick() {
+    this.firebaseService.deleteListing(this.id);
+    this.router.navigate(['/listings']);
   }
 
 }
